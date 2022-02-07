@@ -1,7 +1,9 @@
 
 from mrjob.job import MRJob
 import re
+import sys
 WORD_REGEX = re.compile(r"\b\w+\b")
+
 
 class Lab1(MRJob):
 
@@ -11,7 +13,10 @@ class Lab1(MRJob):
 		for word in words:
 			yield (word.lower(), 1)
 	def reducer(self , word , counts):
-		yield(word , sum(counts))
+		word_counts = sum(counts)
+		if word_counts >= 10 :
+	#		sys.stderr.write("REDUCER INPUT: ({0},{1})\n".format(word,counts))
+			yield(word , word_counts)
 
 
 
