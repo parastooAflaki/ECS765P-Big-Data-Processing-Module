@@ -1,6 +1,6 @@
 ECS765P Big Data Processing Module
 ---
-Msc module Big Data Processing Module by Dr Ahmed M. Abdelmoniem, Jan 2022
+Msc Big Data Processing Module by Dr Ahmed M. Abdelmoniem, Jan 2022
 
 ---
 
